@@ -1,6 +1,6 @@
 const Post = require("../models/postModel");
 
-//Get all posts
+// @GET all posts
 const getAllPosts = async (req, res) => {
   try {
     const allPosts = await Post.find();
@@ -10,7 +10,7 @@ const getAllPosts = async (req, res) => {
   }
 };
 
-// Post to Server
+// @POST to server
 const postPosts = async (req, res) => {
   const post = req.body;
   try {
@@ -20,5 +20,11 @@ const postPosts = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// @GET one Post by ID
+
+// @UPDATE Post by ID
+
+// @DELETE Post by ID
 
 module.exports = { getAllPosts, postPosts };
