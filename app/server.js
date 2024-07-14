@@ -19,6 +19,7 @@ db();
 // importing routers
 const postRouter = require("./routes/postRoutes");
 
+// http://localhost:3001
 router.get("/", (req, res) => {
   try {
     res
@@ -29,6 +30,7 @@ router.get("/", (req, res) => {
   }
 });
 
+// http://localhost:3001/api_v1/posts
 router.use("/api_v1/posts", postRouter);
 
 module.exports = { app, port, router };
